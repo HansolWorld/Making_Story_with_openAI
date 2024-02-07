@@ -75,7 +75,6 @@ jobs:
       - name: Archive app
         # 빌드 및 아카이브
         run: |
-          pod install --repo-update --clean-install --project-directory=Generative_test/
           xcodebuild clean archive -project $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE
       - name: Export app
         # export 를 통해 ipa 파일 만듦
