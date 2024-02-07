@@ -20,13 +20,13 @@ jobs:
       XC_ARCHIVE: ${{ 'Generative_test.xcarchive' }}
       
       # certificate 
-      ENCRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/certification.p12.gpg' }}
-      DECRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/certification.p12' }}
+      ENCRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/Certificates.p12.gpg' }}
+      DECRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/Certificates.p12' }}
       CERT_ENCRYPTION_KEY: ${{ secrets.CERTS_ENCRYPTION_PWD }} # gpg로 파일 암호화할 때 사용한 암호
       
       # provisioning
-      ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/HappyChuseok_GithubActions.mobileprovision.gpg' }}
-      DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/HappyChuseok_GithubActions.mobileprovision' }}
+      ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/GenerativeTest.mobileprovision.gpg' }}
+      DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/GenerativeTest.mobileprovision' }}
       PROVISIONING_ENCRYPTION_KEY: ${{ secrets.PROVISION_ENCRYPTION_PWD }} # gpg로 파일 암호화할 때 사용한 암호
       
       # certification export key
@@ -75,8 +75,8 @@ jobs:
       - name: Archive app
         # 빌드 및 아카이브
         run: |
-          pod install --repo-update --clean-install --project-directory=HappyChuseok/
-          xcodebuild clean archive -workspace $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE
+          pod install --repo-update --clean-install --project-directory=Generative_test/
+          xcodebuild clean archive -project $XC_WORKSPACE -scheme $XC_SCHEME -configuration release -archivePath $XC_ARCHIVE
       - name: Export app
         # export 를 통해 ipa 파일 만듦
         run: |
@@ -84,7 +84,7 @@ jobs:
       - name: Upload app to TestFlight
         uses: apple-actions/upload-testflight-build@v1
         with:
-          app-path: 'HappyChuseok.ipa'
+          app-path: 'Generative_test.ipa'
           issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
           api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
           api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
