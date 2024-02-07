@@ -11,9 +11,6 @@ struct StartView: View {
     @EnvironmentObject var appState: AppState
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image("StartBackground")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
             NavigationLink(destination: NameEnterView()) {
                 Text("시작하기")
                     .foregroundColor(.white)

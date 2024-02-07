@@ -11,7 +11,6 @@ struct MakeStoryView: View {
     @State var storyCount: Int = 0
     @State var isEnd: Bool = false
     @StateObject var speechRecognizer = SpeechRecognizer()
-    @StateObject var viewModel = ChatViewModel()
     @EnvironmentObject var user: User
     @State var speechModel = SpeechModel()
     @State var soundManager = SoundManager.instance
@@ -34,28 +33,9 @@ struct MakeStoryView: View {
                     .padding(.bottom, 72)
                 
                 ScrollView {
-                    ScrollViewReader { proxy in
-                        VStack(alignment: .leading) {
-                            if viewModel.messages.count > 1 {
-                                ForEach(1..<viewModel.messages.count, id: \.self) { index in
-                                    Text("\(index)장. \( viewModel.messages[index].content)")
-                                        .lineLimit(nil)
-                                        .allowsTightening(true)
-                                        .onAppear {
-                                            withAnimation {
-                                                proxy.scrollTo(viewModel.messages[index], anchor: .bottom)
-                                            }
-                                        }
-                                }
-                            }
-                            if viewModel.isLoding {
-                                Text("동화를 작성중이야. 조금만 기다려줘")
-                            }
-                        }
-                        .font(.custom("CookieRunOTF-Regular", size: 46))
-                        .padding(.vertical, 88)
-                        .padding(.horizontal, 56)
-                    }
+                    Text("1장. ")
+                        .lineLimit(nil)
+                        .allowsTightening(true)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(
@@ -69,64 +49,21 @@ struct MakeStoryView: View {
                 )
                 .padding(.bottom, 32)
                 
-                if isEnd == false {
-                    Button(action: {
-                        speechModel.speechStop()
-                        speechRecognizer.buttonAction()
-                        if speechRecognizer.isTranscript == false {
-                            soundManager.playSound(sound: .end)
-                            self.storyCount += 2
-                            viewModel.currentInput = "\"\(speechRecognizer.transcript)\""
-                            viewModel.sendMessage()
-                        } else {
-                            soundManager.playSound(sound: .start)
-                        }
-                    }) {
-                        ButtonImage(systemName: speechRecognizer.isTranscript ? "arrow.counterclockwise" : "mic.fill", disabled: viewModel.isLoding)
-                    }
-                    .disabled(viewModel.isLoding)
-                } else {
-                    NavigationLink(destination: EndStoryView()) {
-                        ButtonImage(systemName: "chevron.forward", disabled: viewModel.isLoding)
-                    }
-                    .simultaneousGesture(TapGesture().onEnded{
-                        speechModel.speechStop()
-                    })
-                    .disabled(viewModel.isLoding)
+                NavigationLink(destination: EndStoryView()) {
+                    ButtonImage(systemName: "chevron.forward", disabled: false)
                 }
+                .simultaneousGesture(TapGesture().onEnded{
+                    speechModel.speechStop()
+                })
             }
             .padding(.vertical, 88)
             .padding(.horizontal, 24)
         }
         .navigationBarHidden(true)
-        .onAppear {
-            viewModel.systemSettingMessage(systemMessage: user.title ?? "")
-        }
-        .onChange(of: viewModel.messages, perform: { newValue in
-            if viewModel.messages.count > 1 && viewModel.messages.count%2 == 0{
-                if let content = newValue.last?.content {
-                    speechModel.speechText(to: content)
-                }
-            }
-        })
         .onChange(of: self.storyCount) { count in
             if count > 3 {
                 isEnd = true
             }
         }
-        .onDisappear {
-            for message in viewModel.messages[1...] {
-                user.chapters.append(Chapter(story: message.content))
-            }
-        }
     }
 }
-
-//struct MakeStoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack {
-//            MakeStoryView()
-//        }
-//        .environmentObject(User(name: "Hansol", title: "어쩌구저쩌구"))
-//    }
-//}

@@ -14,8 +14,6 @@
 		FF3D3EA92AA0CB510041B64A /* CookieRun Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF3D3EA62AA0CB510041B64A /* CookieRun Bold.otf */; };
 		FF3D3EAD2AA0CF650041B64A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3D3EAC2AA0CF650041B64A /* AppState.swift */; };
 		FF3D3EAF2AA0D6810041B64A /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3D3EAE2AA0D6810041B64A /* TTS.swift */; };
-		FF4E7DB72AA2BF860052A19A /* record_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF4E7DB52AA2BF860052A19A /* record_start.mp3 */; };
-		FF4E7DB82AA2BF860052A19A /* record_end.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF4E7DB62AA2BF860052A19A /* record_end.mp3 */; };
 		FF4E7DBA2AA2C0690052A19A /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E7DB92AA2C0690052A19A /* SoundModel.swift */; };
 		FFFC6FDC2A9439BB007C57AC /* Generative_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC6FDB2A9439BB007C57AC /* Generative_testApp.swift */; };
 		FFFC6FDE2A9439BB007C57AC /* NameEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC6FDD2A9439BB007C57AC /* NameEnterView.swift */; };
@@ -50,8 +48,6 @@
 		FF3D3EAB2AA0CB920041B64A /* Generative-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Generative-test-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FF3D3EAC2AA0CF650041B64A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		FF3D3EAE2AA0D6810041B64A /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
-		FF4E7DB52AA2BF860052A19A /* record_start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = record_start.mp3; path = ../../../../../Downloads/record_start.mp3; sourceTree = "<group>"; };
-		FF4E7DB62AA2BF860052A19A /* record_end.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = record_end.mp3; path = ../../../../../Downloads/record_end.mp3; sourceTree = "<group>"; };
 		FF4E7DB92AA2C0690052A19A /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
 		FFFC6FD82A9439BB007C57AC /* 누구의 동화.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "누구의 동화.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFC6FDB2A9439BB007C57AC /* Generative_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generative_testApp.swift; sourceTree = "<group>"; };
@@ -107,15 +103,6 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		FF4E7DB42AA2BF3C0052A19A /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				FF4E7DB62AA2BF860052A19A /* record_end.mp3 */,
-				FF4E7DB52AA2BF860052A19A /* record_start.mp3 */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		FFFC6FCF2A9439BB007C57AC = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +125,6 @@
 				FF3D3EAB2AA0CB920041B64A /* Generative-test-Info.plist */,
 				FFFC6FDB2A9439BB007C57AC /* Generative_testApp.swift */,
 				FFFC70012A9A3DBB007C57AC /* StartView.swift */,
-				FF4E7DB42AA2BF3C0052A19A /* Sounds */,
 				FF3D3EAA2AA0CB620041B64A /* fonts */,
 				FFFC70062A9A5723007C57AC /* Onboarding */,
 				FFFC700F2A9A5D3B007C57AC /* MakeStory */,
@@ -284,9 +270,7 @@
 				FF3D3EA82AA0CB510041B64A /* CookieRun Regular.otf in Resources */,
 				FFFC6FE02A9439BD007C57AC /* Assets.xcassets in Resources */,
 				FF3D3EA72AA0CB510041B64A /* CookieRun Black.otf in Resources */,
-				FF4E7DB72AA2BF860052A19A /* record_start.mp3 in Resources */,
 				FF3D3EA92AA0CB510041B64A /* CookieRun Bold.otf in Resources */,
-				FF4E7DB82AA2BF860052A19A /* record_end.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

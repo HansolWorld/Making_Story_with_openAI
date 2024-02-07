@@ -20,12 +20,6 @@ struct MakeStoryCanvasView: View {
                 canvas
                     .frame(height: UIScreen.main.bounds.height/2)
                     .padding(.bottom, 36)
-                Text(user.chapters[storyCount].story)
-                    .font(.custom("CookieRunOTF-Regular", size: 36))
-                if storyCount == user.chapters.count-1 {
-                    Text("-끝-")
-                        .font(.custom("CookieRunOTF-Regular", size: 24))
-                }
                 Spacer()
                 HStack {
                     Button(action: {
@@ -61,12 +55,6 @@ struct MakeStoryCanvasView: View {
         }
         .ignoresSafeArea()
         .navigationBarBackButtonHidden()
-        .onDisappear {
-            user.chapters[storyCount].image = canvas.saveImage()
-        }
-        .onAppear {
-            speechModel.speechText(to: user.chapters[storyCount].story)
-        }
     }
 }
 
