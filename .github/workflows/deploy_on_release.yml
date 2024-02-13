@@ -53,6 +53,9 @@ jobs:
           security set-keychain-settings
       - name : Configure Code Signing
         run: |
+          # xcode 버전 확인
+          xcodebuild -version
+          
           # certificate 복호화
           gpg -d -o "$DECRYPTED_CERT_FILE_PATH" --pinentry-mode=loopback --passphrase "$CERT_ENCRYPTION_KEY" "$ENCRYPTED_CERT_FILE_PATH"
           # provisioning 복호화
