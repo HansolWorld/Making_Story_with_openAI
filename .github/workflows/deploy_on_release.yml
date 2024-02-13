@@ -15,7 +15,7 @@ jobs:
     runs-on: macos-latest
     env:
       # app archive 및 export 에 쓰일 환경 변수 설정
-      XC_WORKSPACE: ${{ 'Generative_test/누구의 동화.xcodeproj' }}
+      XC_WORKSPACE: ${{ 'Generative_test/Generative.xcodeproj' }}
       XC_SCHEME: ${{ 'Generative_test' }}
       XC_ARCHIVE: ${{ 'Generative_test.xcarchive' }}
       
