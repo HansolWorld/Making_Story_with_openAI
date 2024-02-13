@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FFFC6FD72A9439BB007C57AC"
-               BuildableName = "&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;.app"
-               BlueprintName = "&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;"
-               ReferencedContainer = "container:&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;.xcodeproj">
+               BuildableName = "Generative.app"
+               BlueprintName = "Generative"
+               ReferencedContainer = "container:Generative.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FFFC6FD72A9439BB007C57AC"
-            BuildableName = "&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;.app"
-            BlueprintName = "&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;"
-            ReferencedContainer = "container:&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;.xcodeproj">
+            BuildableName = "Generative.app"
+            BlueprintName = "Generative"
+            ReferencedContainer = "container:Generative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FFFC6FD72A9439BB007C57AC"
-            BuildableName = "&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;.app"
-            BlueprintName = "&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;"
-            ReferencedContainer = "container:&#x1102;&#x116e;&#x1100;&#x116e;&#x110b;&#x1174; &#x1103;&#x1169;&#x11bc;&#x1112;&#x116a;.xcodeproj">
+            BuildableName = "Generative.app"
+            BlueprintName = "Generative"
+            ReferencedContainer = "container:Generative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

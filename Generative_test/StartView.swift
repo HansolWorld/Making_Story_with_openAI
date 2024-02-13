@@ -32,3 +32,4 @@ struct StartView_Previews: PreviewProvider {
         }
     }
 }
+

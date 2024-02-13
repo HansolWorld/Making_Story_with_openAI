@@ -49,7 +49,7 @@
 		FF3D3EAC2AA0CF650041B64A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		FF3D3EAE2AA0D6810041B64A /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
 		FF4E7DB92AA2C0690052A19A /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
-		FFFC6FD82A9439BB007C57AC /* 누구의 동화.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "누구의 동화.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFFC6FD82A9439BB007C57AC /* Generative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFC6FDB2A9439BB007C57AC /* Generative_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generative_testApp.swift; sourceTree = "<group>"; };
 		FFFC6FDD2A9439BB007C57AC /* NameEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterView.swift; sourceTree = "<group>"; };
 		FFFC6FDF2A9439BD007C57AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		FFFC6FD92A9439BB007C57AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFFC6FD82A9439BB007C57AC /* 누구의 동화.app */,
+				FFFC6FD82A9439BB007C57AC /* Generative.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FFFC6FD72A9439BB007C57AC /* 누구의 동화 */ = {
+		FFFC6FD72A9439BB007C57AC /* Generative */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFFC6FE62A9439BD007C57AC /* Build configuration list for PBXNativeTarget "누구의 동화" */;
+			buildConfigurationList = FFFC6FE62A9439BD007C57AC /* Build configuration list for PBXNativeTarget "Generative" */;
 			buildPhases = (
 				FFFC6FD42A9439BB007C57AC /* Sources */,
 				FFFC6FD52A9439BB007C57AC /* Frameworks */,
@@ -217,12 +217,12 @@
 			);
 			dependencies = (
 			);
-			name = "누구의 동화";
+			name = Generative;
 			packageProductDependencies = (
 				FFFC702B2A9D6C2D007C57AC /* Alamofire */,
 			);
 			productName = Generative_test;
-			productReference = FFFC6FD82A9439BB007C57AC /* 누구의 동화.app */;
+			productReference = FFFC6FD82A9439BB007C57AC /* Generative.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +240,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FFFC6FD32A9439BB007C57AC /* Build configuration list for PBXProject "누구의 동화" */;
+			buildConfigurationList = FFFC6FD32A9439BB007C57AC /* Build configuration list for PBXProject "Generative" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -256,7 +256,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FFFC6FD72A9439BB007C57AC /* 누구의 동화 */,
+				FFFC6FD72A9439BB007C57AC /* Generative */,
 			);
 		};
 /* End PBXProject section */
@@ -432,10 +432,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Generative_test/Preview Content\"";
-				DEVELOPMENT_TEAM = KRY967CND6;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KRY967CND6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Generative-test-Info.plist";
@@ -453,8 +455,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sol.GenerativeAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sol.GenerativeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = githubaction;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -469,10 +473,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Generative_test/Preview Content\"";
-				DEVELOPMENT_TEAM = KRY967CND6;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KRY967CND6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Generative-test-Info.plist";
@@ -490,8 +496,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sol.GenerativeAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sol.GenerativeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = githubaction;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -504,7 +512,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FFFC6FD32A9439BB007C57AC /* Build configuration list for PBXProject "누구의 동화" */ = {
+		FFFC6FD32A9439BB007C57AC /* Build configuration list for PBXProject "Generative" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFFC6FE42A9439BD007C57AC /* Debug */,
@@ -513,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFFC6FE62A9439BD007C57AC /* Build configuration list for PBXNativeTarget "누구의 동화" */ = {
+		FFFC6FE62A9439BD007C57AC /* Build configuration list for PBXNativeTarget "Generative" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFFC6FE72A9439BD007C57AC /* Debug */,
